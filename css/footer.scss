@@ -1,0 +1,67 @@
+#footer {
+  $footerPadding : 35px;
+  margin-top: 50px;
+  padding-top: $footerPadding;
+  padding-bottom: 30px;
+  border-top: 10px solid $gsaRed;
+  background: $footerBG url(../images/zebra-gradient.png) repeat-x 0 0;
+  ul {
+    li {
+      padding: 3px 0;
+        a {
+          color: $navItemColor;
+        }
+    }
+  }
+  .social-links-block {
+    background: $gsaBlue;
+    padding: 20px 25px;
+    margin-top: -$footerPadding+-25;
+    z-index: 99;
+      @include large-desktops {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @include desktops {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    figure {
+      margin: -5px -5px 10px -5px;
+    }
+    h5 {
+      @include font-size(17px);
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: normal;
+      color: #fff;
+      padding-bottom: 10px;
+        @include large-desktops {
+          @include font-size(15px);
+        }
+        @include desktops {
+          @include font-size(12px);
+        }
+        a {
+          color: #fff;
+        }
+    }
+  }
+}
+
+.social-links {
+  h5 {
+    @include font-size(17px);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    padding-bottom: 10px;
+    @include large-desktops {
+      @include font-size(15px);
+    }
+    @include desktops {
+      @include font-size(12px);
+    }
+  }
+}

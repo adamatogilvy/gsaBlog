@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import 'bootstrap';
+@import 'glyphs';
+@import 'global-variables';
+@import 'mixins';
+@import 'wordpress-core';
+@import 'ng-animations';
+@import 'block';
+@import 'banner';
+@import 'sidebar';
+@import 'gsa-header-footer';
+
+body {
+  font-size: 16px;
+  font-family: $gsaBodyFont;
+  @include tablets {
+    margin: 0;
+  }
+}
+a {
+  color: $gsaBlue;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+#main-content-wrap {
+  margin-top: 20px;
+}
+.SectionTitle {
+  font-family: $gsaFontFamily;
+  font-size: 24px;
+  border-top:1px solid #eaeaea;
+  border-bottom:1px solid #eaeaea;
+  display:block;
+  margin:15px 0;
+  padding:5px 0;
+}
+
+.archive-title {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  text-transform: capitalize;
+  h2 {
+    margin: 0;
+    padding: 15px 0;
+  }
+}
+.btn-gsa-lightblue {
+  background: $gsaLightBlue;
+  @include border-radius(0);
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+  @include transition(all 0.3s);
+  font-family: $gsaFontFamily;
+}
+.social-row {
+  li {
+    padding: 0;
+    margin: 0 5px;
+    display: block;
+    float: left;
+    width: 28px;
+    height: 28px;
+    background: url(../images/social-media-sprite.png) no-repeat;
+    a {
+      display: block;
+      height: 100%;
+      &:hover {
+        text-decoration: none;
+        color: $gsaLightBlue;
+      }
+    }
+    &.facebook-icon{
+      background-position: 0 0;
+        &:hover {
+          background-position: 0 -33px;
+        }
+    }
+    &.twitter-icon{
+      background-position: -30px 0;
+      &:hover {
+        background-position: -30px -33px;
+      }
+    }
+    &.youtube-icon{
+      background-position: -76px 0;
+      &:hover {
+        background-position: -76px -33px;
+      }
+    }
+    &.instagram-icon{
+      background-position: -120px 0;
+      &:hover {
+        background-position: -120px -33px;
+      }
+    }
+    &.pintrest-icon{
+      background-position: -160px 0;
+      &:hover {
+        background-position: -160px -33px;
+      }
+    }
+    &.email-icon{
+      background-position: -192px 0;
+      &:hover {
+        background-position: -192px -33px;
+      }
+    }
+  }
+}
+
+#gsablog-navigation {
+  border-bottom: 10px solid #000;
+  padding: 40px 0 20px;
+  font-family: $gsaFontFamily;
+  @include tablets {
+    padding-top: 20px;
+  }
+  form {
+    margin-bottom: 25px;
+  }
+  .form-group {
+    position: relative;
+    input {
+      background: $lightGray;
+      color: $gsaBeige;
+      padding-left: 30px;
+      border-radius: 0;
+      border: 0;
+    }
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 2.1;
+      background: none;
+      border: 0;
+      color: #fff;
+    }
+  }
+  #stay-connected {
+    margin-top: -10px;
+    strong {
+      text-align: center;
+      color: $gsaBeige;
+      padding-right: 33px;
+    }
+  }
+}
+#logo {
+  img {
+    margin: 0 auto;
+  }
+}
+
+#tag-nav {
+  border-bottom: 2px solid #bbb7b7;
+  padding: 10px 0 0 0;
+  #tag-menu-toggle {
+    text-transform: uppercase;
+    font-family: $gsaFontFamily;
+  }
+  ul {
+    margin-left: 0;
+    @include tablets {
+      display: none;
+        li {
+          width: 100%;
+          padding: 5px;
+        }
+    }
+    li {
+      text-transform: uppercase;
+      font-weight: 700;
+      @include font-size(20px);
+      font-family: $gsaFontFamily;
+      padding-right: 70px;
+      padding-left: 0;
+      @include large-desktops {
+        padding-right: 31px;
+      }
+      a {
+        color: #999;
+        @include transition(all 0.3);
+        &:hover {
+          color: #000;
+          text-decoration: none;
+        }
+      }
+      &.current-menu-item {
+        a {
+          color: #000;
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.category-banner {
+  margin-bottom: 20px;
+}
+
+#pagination-nav {
+  text-align: center;
+    a {
+      color: $gsaLightBlue;
+    }
+    .active {
+      a {
+        background: $gsaLightBlue;
+        border-color: $gsaLightBlue;
+        color: #fff;
+      }
+    }
+
+}

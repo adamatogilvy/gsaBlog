@@ -1,0 +1,235 @@
+#skip {
+  a {
+    position:absolute;
+    left:auto;
+    top:-10000px;
+    height:1px;
+    overflow:hidden;
+    &:focus {
+      position:absolute;
+      height:auto;
+      top: 0;
+      left: 0;
+      background: $gsaLightBlue;
+      text-align: center;
+      z-index:9999;
+      color: #fff;
+      padding: 20px;
+    }
+  }
+}
+.navbar-brand {
+  margin-left: 0!important;
+  float: none;
+  display: block;
+  height: auto;
+  @include box-shadow(5px 5px 7px -5px, #333);
+}
+#inner-main-navigation {
+  background: #fff;
+  nav {
+    background: none;
+    border: 0;
+    font-family: $gsaFontFamily;
+    @include border-radius(0);
+    margin-bottom: 0;
+    .navbar-header {
+      width: 6.6%;
+      @include desktops {
+        width: 8.6%;
+      }
+      a {
+        padding: 0;
+      }
+    }
+  }
+  ul#main-nav {
+    width: 93.4%;
+    background: none;
+    @include box-shadow(-5px 5px 7px -5px, #333);
+    @include desktops {
+      width: 91.4%;
+    }
+    @include tablets {
+      width: 100%;
+    }
+    > li {
+      background: #fff;
+      background: rgba(255,255,255,1);
+      text-align:center;
+      width: 15.5%;
+      position: static;
+      border-right: 1px solid $gsaBeige;
+      &:last-child {
+        width: 7%;
+        background: $gsaLightBlue;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        padding-top: 25px;
+        color: #fff;
+          a {
+            margin-top: -41px;
+          }
+          @include tablets {
+            display: none;
+          }
+      }
+      &:nth-child(6){
+        span {
+          border: 0;
+        }
+      }
+      &.open {
+        background: $gsaBeige;
+      }
+      > a {
+        padding-top: 27px;
+        padding-bottom: 27px;
+        @include large-desktops {
+          @include font-size(20px);
+          padding-top: 20px;
+          padding-bottom: 21px;
+        }
+        @include desktops {
+          @include font-size(18px);
+          padding-top: 20px;
+          padding-bottom: 21px;
+        }
+        @include tablets {
+          padding: 6px 5px;
+          border-right: 0;
+        }
+        i {
+          color: #fff;
+          @include font-size(22px);
+          margin-top: 0;
+          @include desktops {
+            @include font-size(18px);
+            margin-top: 0;
+          }
+        }
+        .sub-arrow {
+          display: none;
+        }
+        &.selected {
+          background: $gsaBeige;
+        }
+
+        &:hover, &:active {
+          background: none;
+        }
+      }
+      > .dropdown-menu {
+        font-family: $gsaBodyFont;
+        left: auto;
+        top: auto;
+        background: $gsaBeige;
+        padding: 0 0 40px;
+        @include box-shadow(0,0);
+        @include border-radius(0);
+        border: 0;
+        border-top: 5px solid rgba(0,0,0,0);
+        -webkit-background-clip: padding-box; /* for Safari */
+        background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+        > li {
+          line-height: 2.2;
+          color: $darkGray;
+          @include tablets {
+            width: 100%;
+          }
+          a {
+            display: block;
+            position: relative;
+            white-space: normal;
+            &:hover, &:focus {
+              background: $offWhite;
+              color: $navItemColor;
+            }
+          }
+          &.open {
+            background: $offWhite;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pull-quotes {
+  width: 33%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include flexbox;
+  @include flexAlignItems(center);
+  height: 230px;
+  h3 {
+    padding: 0 20px;
+    @include font-size(22px);
+    color: $offWhite;
+    font-weight: normal;
+  }
+}
+
+// Search
+.main-nav-search-field {
+  width: 33%;
+  position: absolute;
+  right: 15px;
+  top: 100%;
+  padding: 20px 40px 5px;
+  font-family: $gsaBodyFont;
+  background: $gsaLightBlue;
+  display: none;
+  @include desktops {
+    padding: 20px 10px 5px;
+  }
+    #submit-gsa-search {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      border: 0;
+      @include transition(all 0.4s);
+      line-height: 2;
+        &:hover {
+          color: $gsaLightBlue;
+          font-weight: bold;
+        }
+    }
+}
+
+// Breadcrumbs
+#breadcrumbs {
+  background: $gsaLightBlue;
+  padding: 6px 0;
+  @include font-size(20px);
+  @include tablets {
+    display: none;
+  }
+  ol {
+    padding: 5px 0;
+    margin: 0;
+    li {
+      text-transform: capitalize;
+      color: $navItemColor;
+      a {
+        color: $navItemColor;
+      }
+    }
+  }
+  > .container {
+    span {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
